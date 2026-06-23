@@ -1,6 +1,7 @@
-
-export function Home(){
-  return(
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa"
+import { Social } from "../../components/Social"
+export function Home() {
+  return (
     <div className="flex flex-col w-full py-4 items-center justify-center">
       <h1 className="md:text-4xl  text-3xl font-bold text-white mt-20">Jonathan beskow</h1>
       <span className="text-gray-50 mb-5 mt-3">Veja meus links 👇</span>
@@ -15,7 +16,15 @@ export function Home(){
         </section>
 
         <footer className="flex justify-center gap-3 my-4">
-          
+          <Social url="#">
+            <FaFacebook size={35} color="#fff" />
+          </Social>
+          <Social url="#">
+            <FaLinkedin size={35} color="#fff" />
+          </Social>
+          <Social url="#">
+            <FaGithub size={35} color="#fff" />
+          </Social>
         </footer>
 
       </main>
