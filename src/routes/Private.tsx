@@ -1,4 +1,4 @@
-import { unsubscribe } from "diagnostics_channel";
+
 import { onAuthStateChanged } from "firebase/auth";
 import type { ReactNode } from "react";
 import { useEffect, useState } from 'react';
@@ -26,9 +26,6 @@ export function Private({ children }: PrivateProps): any {
             }
         })
 
-        return () => {
-            unsubscribe();
-        }
     }, [])
 
     if (loading) {
